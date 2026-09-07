@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Plus, Check } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useCart } from "@/context/CartContext";
@@ -12,7 +12,7 @@ import {
   type MenuItem,
 } from "@/data/menuData";
 
-const staggerItemVariants = {
+const staggerItemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
