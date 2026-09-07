@@ -3,11 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Coffee,
-  Play,
-} from "lucide-react";
+import { ArrowRight, Coffee } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { menuItems, formatPrice } from "@/data/menuData";
 
@@ -47,18 +43,19 @@ export default function HomePage() {
 function HeroSection() {
   return (
     <section className="relative h-screen min-h-[600px] flex items-end justify-center overflow-hidden">
-      {/* Video / Background Placeholder */}
+      {/* Background Video */}
       <div className="absolute inset-0 bg-espresso">
-        {/* Placeholder for autoplay video – dark cinematic overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/60 to-espresso/30" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white/10">
-            <Play size={80} strokeWidth={0.5} />
-            <p className="mt-2 text-xs tracking-widest uppercase font-body">
-              Video Background
-            </p>
-          </div>
-        </div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+        >
+          <source src="/src/hero.mp4" type="video/mp4" />
+        </video>
+        {/* Dark cinematic overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/60 to-espresso/40" />
       </div>
 
       {/* Content */}
