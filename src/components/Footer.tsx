@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Send, MapPin, Clock, ArrowRight } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import ScrollReveal from "./ScrollReveal";
@@ -48,13 +49,24 @@ export default function Footer() {
         <div className="mx-auto max-w-6xl px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Column 1: Brand & About */}
           <div>
-            <Link href="/" className="font-heading text-xl text-espresso">
-              <span className="font-bold">Kopi</span>
-              <span className="font-normal opacity-70">Ruang</span>
+            <Link
+              href="/"
+              className="inline-block group mb-5 transition-transform duration-300 hover:scale-105"
+              aria-label="PATDUA Home"
+            >
+              <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shadow-sm flex items-center justify-center bg-white">
+                <Image
+                  src="/src/logo.jpeg"
+                  alt="PATDUA Logo"
+                  fill
+                  sizes="96px"
+                  className="object-cover scale-125 transition-transform duration-300 group-hover:scale-135"
+                />
+              </div>
             </Link>
-            <p className="mt-4 text-ash text-sm leading-relaxed">
-              A historic gathering house, now brewing. Where community meets
-              craft coffee in a space designed for warmth and belonging.
+            <p className="text-ash text-sm leading-relaxed">
+              Where industrial aesthetics meet botanical warmth. Serving specialty coffee,
+              signature dishes, and a cozy space designed for productivity and togetherness.
             </p>
             <div className="flex items-center gap-4 mt-6">
               <a
@@ -154,11 +166,11 @@ export default function Footer() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="KopiRuang Location"
+                title="PATDUA Eatery & Coffee Location"
               />
             </div>
             <p className="mt-3 text-xs text-ash">
-              Jl. Heritage No. 12, Menteng, Jakarta Pusat
+              Jl. Rungkut Madya No. 203, Rungkut Kidul, Surabaya
             </p>
           </div>
         </div>
@@ -168,10 +180,10 @@ export default function Footer() {
       <div className="border-t border-soft-line">
         <div className="mx-auto max-w-6xl px-6 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-ash">
-            &copy; {new Date().getFullYear()} KopiRuang. All rights reserved.
+            &copy; {new Date().getFullYear()} PATDUA Eatery & Coffee. All rights reserved.
           </p>
           <p className="text-xs text-ash/50">
-            Crafted with warmth &amp; minimalism
+            Industrial Modern &amp; Botanical Warmth
           </p>
         </div>
       </div>

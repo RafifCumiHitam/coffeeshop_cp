@@ -22,29 +22,30 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "KopiRuang — A Historic Gathering House, Now Brewing",
-    template: "%s | KopiRuang",
+    default: "PATDUA Eatery & Coffee — Industrial Modern & Botanical Warmth",
+    template: "%s | PATDUA Eatery & Coffee",
   },
   description:
-    "Discover KopiRuang, a warm minimalist café where community meets craft coffee. Browse our menu, order ahead for pick-up, or book an event in our heritage space.",
+    "Discover PATDUA Eatery & Coffee Surabaya, an industrial modern café with botanical warmth. Browse our curated specialty coffee and eatery menu, order ahead, or enjoy our cozy workspace.",
   keywords: [
     "coffee shop",
     "café",
     "kopi",
     "specialty coffee",
-    "Jakarta",
+    "Surabaya",
+    "PATDUA",
+    "Patdua Eatery",
     "order online",
-    "catering",
-    "events",
+    "eatery",
   ],
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://kopiruang.id",
-    siteName: "KopiRuang",
-    title: "KopiRuang — A Historic Gathering House, Now Brewing",
+    locale: "id_ID",
+    url: "https://patdua.id",
+    siteName: "PATDUA Eatery & Coffee",
+    title: "PATDUA Eatery & Coffee — Industrial Modern & Botanical Warmth",
     description:
-      "Community meets craft coffee in a space designed for warmth and belonging.",
+      "Where industrial aesthetics meet botanical warmth. Specialty coffee and signature dishes in Surabaya.",
   },
 };
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${playfair.variable} ${inter.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-canvas-white text-espresso font-body">

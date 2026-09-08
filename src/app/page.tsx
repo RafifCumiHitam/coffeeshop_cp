@@ -64,10 +64,10 @@ function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="font-heading text-white leading-tight"
+          className="font-heading leading-tight drop-shadow-md"
         >
-          A Historic Gathering House,{" "}
-          <span className="italic font-normal opacity-80">Now Brewing.</span>
+          <span className="text-canvas-white">A Historic Gathering House,</span>{" "}
+          <span className="italic font-normal text-amber-gold">Now Brewing.</span>
         </motion.h1>
 
         <motion.p

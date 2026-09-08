@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
@@ -36,7 +37,7 @@ export default function Header() {
   return (
     <>
       <motion.header
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -55,12 +56,25 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className={`font-heading text-xl tracking-wide transition-colors duration-300 ${
-              !scrolled && isHome ? "text-white" : "text-espresso"
-            }`}
+            className="flex items-center group transition-transform duration-300 hover:scale-105"
+            aria-label="PATDUA Home"
           >
-            <span className="font-bold">Kopi</span>
-            <span className="font-normal opacity-70">Ruang</span>
+            <div
+              className={`relative overflow-hidden rounded-2xl shadow-sm transition-all duration-500 flex items-center justify-center bg-white ${
+                scrolled
+                  ? "h-11 w-11 md:h-12 md:w-12"
+                  : "h-13 w-13 md:h-15 md:w-15"
+              }`}
+            >
+              <Image
+                src="/src/logo.jpeg"
+                alt="PATDUA Logo"
+                fill
+                sizes="(max-width: 768px) 60px, 72px"
+                className="object-cover scale-125 transition-transform duration-300 group-hover:scale-135"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -142,8 +156,21 @@ export default function Header() {
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="fixed top-0 right-0 bottom-0 z-[70] w-72 bg-canvas-white flex flex-col"
             >
-              <div className="flex items-center justify-between p-6">
-                <span className="font-heading text-lg text-espresso">Menu</span>
+              <div className="flex items-center justify-between p-6 border-b border-soft-line">
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="relative w-11 h-11 rounded-xl overflow-hidden shadow-sm flex items-center justify-center bg-white"
+                  aria-label="PATDUA Home"
+                >
+                  <Image
+                    src="/src/logo.jpeg"
+                    alt="PATDUA Logo"
+                    fill
+                    sizes="44px"
+                    className="object-cover scale-125"
+                  />
+                </Link>
                 <button
                   onClick={() => setMobileOpen(false)}
                   className="p-2 text-espresso cursor-pointer"

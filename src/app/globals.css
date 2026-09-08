@@ -1,19 +1,30 @@
 @import "tailwindcss";
 
 /* ========================================
-   WARM MINIMALISM — Design Tokens
+   PATDUA COFFEE & EATERY — Brand Design Tokens
    ======================================== */
 
 @theme inline {
-  /* Color Palette */
-  --color-canvas-white: #FCFCFC;
-  --color-warm-offwhite: #F5F3F0;
-  --color-espresso: #1C1917;
-  --color-ash: #78716C;
-  --color-oak: #8B5A2B;
-  --color-oak-dark: #6D4722;
-  --color-terracotta: #C86B5E;
-  --color-soft-line: #E7E5E4;
+  /* Authentic Patdua Palette — Minimalist Clean White, Signature Forest Green, Soft Sage & Charcoal Slate */
+  --color-canvas-white: #FCFDFD;     /* Patdua Clean White (Background 1) */
+  --color-concrete-white: #FCFDFD;
+  --color-warm-offwhite: #F0F4F1;    /* Soft Sage Concrete (Background 2 / Cards) */
+  --color-soft-cement: #F0F4F1;
+  --color-espresso: #131916;         /* Charcoal Slate (Primary Text & Strong Accents) */
+  --color-charcoal-black: #131916;
+  --color-ash: #5E6E66;              /* Muted Sage Grey (Secondary Text & Subtitles) */
+  --color-muted-slate: #5E6E66;
+  --color-oak: #1B3D30;              /* Patdua Signature Forest Green (Primary Brand & CTA) */
+  --color-oak-dark: #122920;         /* Deep Forest Green on Hover */
+  --color-patdua-green: #1B3D30;
+  --color-roasted-wood: #1B3D30;
+  --color-terracotta: #386C52;       /* Botanical Leaf (Accent 2 / Badge / Highlights) */
+  --color-botanical-green: #386C52;
+  --color-sage: #4E7C66;
+  --color-sage-light: #E4ECE6;
+  --color-amber-gold: #D5A059;       /* Warm Ambient Light Glow */
+  --color-soft-line: #E0E6E2;        /* Crisp Concrete Line (Dividers & Borders) */
+  --color-steel-line: #E0E6E2;
 
   /* Typography */
   --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
